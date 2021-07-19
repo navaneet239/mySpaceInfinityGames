@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Load an icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><title>Infinite Cosmos | Home page</title>
-<link rel="shortcut icon" href="Infinite cosmos-i.ico"/>
+<link rel="icon" href="Infinite cosmos-i.ico" type="image/x-icon">
 <script src="sketch.js"></script>
 
 <style>
@@ -37,6 +37,7 @@ body {
   cursor: pointer;
   padding: 14px 16px;
   font-size: 17px;
+  font-size:2vw;
   width: 25%;
   height: 100px
 }
@@ -54,13 +55,12 @@ body {
 }
 
 #Home {background-color: #2F3136;}
-#Invite {background-color: #2F3136;}
 #Doubt {background-color: #2F3136;}
 
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: rgba(51, 51, 51, 0.329);
 }
 
 .topnav a {
@@ -146,6 +146,7 @@ body, html {
   top: 50%;
   width: 100%;
   text-align: center;
+  font-size:2vw;
   color: #000;
 }
 
@@ -162,6 +163,8 @@ h3 {
   text-transform: uppercase;
   font: 20px "Lato", sans-serif;
   color: #111;
+  font-size:2vw;
+
 }
 
 /* Turn off parallax scrolling for tablets and phones */
@@ -185,6 +188,7 @@ A {text-decoration: none; color: white;}
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
+
 }
 
 .button2 span {
@@ -217,7 +221,6 @@ A {text-decoration: none; color: white;}
   width: 100%;
   padding: 50px 0;
   text-align: center;
-  background-color: lightblue;
   margin-top: 20px;
 }
 
@@ -264,6 +267,8 @@ A {text-decoration: none; color: white;}
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
+  font-size:2vw;
+
 }
 
 .button:hover {background-color: #3e8e41}
@@ -276,7 +281,7 @@ A {text-decoration: none; color: white;}
 
 /* Place the navbar at the bottom of the page, and make it stick */
 .navbar {
-  background-color: rgb(36, 35, 35);
+  background-color: rgba(51, 51, 51, 0.329);
   overflow: hidden;
   position: fixed;
   bottom: 0;
@@ -293,6 +298,7 @@ A {text-decoration: none; color: white;}
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  font-size:2vw;
 }
 
 /* Change the color of links on hover */
@@ -332,21 +338,24 @@ A {text-decoration: none; color: white;}
   transition: max-height 0.2s ease-out;
 }
 
+.responsive {
+  width: auto;
+  height: 100px;
+}
+
 </style>
 </head>
 <body class="bg" bgcolor="#2F3136">
 
 <div class="topnav" id="myTopnav">
-    <img style="float: right;" src="Infinite Cosmos banner orginal.png" alt="Server logo" width="425px" height="100px">
-    <img style="float: left;" src="NPJ group of companies official logo (without background) 2.png" alt="Server logo" width="175px" height="100px">
-    
+    <center>
+    <img src="Infinite Cosmos banner orginal.png" alt="Server logo" class="responsive">
+    </center>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
   </a>
 
 </div>
-<button class="button" onclick="myFunction2()" style="float: right; position: relative;"><font size="2"> show/don't show join header </font></button>
 
-<button class="button" onclick="myFunction4()" style="position: relative; float: left; z-index: 2;"><font size="2"> minimize/maximize navigation bar </font></button>
 
 <br>
 
@@ -354,17 +363,17 @@ A {text-decoration: none; color: white;}
   <div class="header" id="myHeader">
     <center>
     <h5>Join header</h5>
-    <h3> <font color="white">Please Do join our Discord community server!</font></h3>
+    <h3> <font color="white"><i class="fa fa-bell"></i> Please Do join our Discord community server! <i class="fa fa-bell"></i></font></h3>
     <h4><font color="grey">Please open the link separately from this page</font></h4>
-    <button class="button2" ><span><a href="https://discord.gg/s8tCkeZBtG">Invite link</a></span></button>
+    <button class="button2" style="font-size: medium;"><span><a href="https://discord.gg/s8tCkeZBtG"><i class="fa fa-link"></i> Invite link</a></span></button>
     </center>
   </div></div>
 <div id="myDIV2">
   <div class="navbar">
       <a href="#home"  onclick="openPage('Home', this, '#414957')"><i class="fa fa-fw fa-home"></i> Home</a>
-      <a href="#Invite" onclick="openPage('Invite', this, '#414957')"><i class="fa fa-fw fa-user"></i>Widget</a>
       <a href="#contact" onclick="openPage('Doubt', this, '#414957')"><i class="fa fa-globe"></i> Global clarification and doubts</a>
-      <img src="Infinite Cosmos.png" style="width: 75px; height: 75px; float: right;">
+      <a onclick="myFunction2()"><i class="fa fa-eye"></i> show/don't show join header </font></a>
+      <img style="float: right;" src="NPJ group of companies official logo (without background) 2.png" alt="Server logo" width="125px" height="75px">
     </div>
 </div>
 
@@ -428,13 +437,6 @@ A {text-decoration: none; color: white;}
           <span class="border">Join and have fun!</span>
         </div>
       </div>
-  </div>
-  
-  <div id="Invite" class="tabcontent">
-    <center>
-    <h3>Click connect to be directed to the invite link</h3>
-    <iframe src="https://discord.com/widget?id=831171039723388998&theme=dark" width="400" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>  </div>
-    </center>
   </div>
 
   <div id="Doubt" class="tabcontent">
@@ -524,49 +526,6 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
-    
-    function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-
-function openPage(pageName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-}
-
-function myFunction2() {
-  var x = document.getElementById("myDIV");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-function myFunction4() {
-  var x = document.getElementById("myDIV2");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-
     </script>
 
 </body>
